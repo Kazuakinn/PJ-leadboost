@@ -1,0 +1,59 @@
+:root {
+     --color-background: rgba(140, 140, 140, 1);
+     --color-black: #212121;
+     --color-black-heavy : #000000;
+     --color-text: #4f4f4f;
+     --color-text-out: #90908e;
+     --color-primary: #ffbf00;
+     --color-secondary: #fff2cc;
+     --color-white: #ffffff;
+     --color-red: #e74c3c;
+     --color-green: #2ecc71;
+     --color-separate: #cccccc;
+}
+
+body {
+    background: gray !important;
+}
+
+section {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    border-radius: 10px;
+    color: var(--color-black-heavy);
+    padding-top: 50px;
+    padding-bottom:50px;
+    padding-right: 700px;
+    padding-left: 50px;
+    margin: 10%;
+    background: #cccccc;
+}
+
+
+.container input {
+    border: none;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 5px;
+    box-shadow: 0px 5px 10px -5px;
+}
+
+select, option {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 5px 10px -5px;
+}
+
+.coluna-imagem {
+    display: flex;
+    
+}
