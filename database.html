@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planilha de Alunos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <style>
+       .custom-navbar {
+            background-color: #bce1f9 !important;
+            color: #fff !important;
+        }
+        nav img {
+            width: 20%;
+        }
+        section {
+            padding: 20px;
+            background-color: #f9f9f9;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        main {
+            padding: 20px;
+        }
+        .btn-primary svg {
+            width: 1em;
+            height: 1em;
+        }
+        .icon-filter {
+            margin-top: 8px;
+        }
+        .filter-button {
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="/img/LOGO-PROJETO.png" alt="" class="img-fluid"></a>
+            <button class="btn btn-outline-secondary" onclick="sair()">Sair</button>
+        </div>
+    </nav>
+
+    <section class="container mt-4">
+        <div class="input-group col-md-7">
+            <input type="text" class="form-control" placeholder="Pesquisar" id="campo-pesquisa" name="cps">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="submit" id="botao-pesquisar">Pesquisar</button>
+            </div>
+            <a href="#" class="filter-button ml-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter icon-filter">
+                    <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <main class="container mt-4">
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>CPF</th>
+                        <th>Nome do Pai</th>
+                        <th>Nome da Mãe</th>
+                        <th>Curso Desejado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Exemplo de linha com dados -->
+                    <tr>
+                        <td>João João</td>
+                        <td>email1@example.com</td>
+                        <td>123.456.789-00</td>
+                        <td>Maria Edivaldo</td>
+                        <td>Edvaldo</td>
+                        <td>Sistema para internet</td>
+                    </tr>
+                    <!-- Adicione mais linhas conforme necessário -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <script>
+        function sair() {
+            alert('Você saiu!');
+        }
+    </script>
+</body>
+</html>
