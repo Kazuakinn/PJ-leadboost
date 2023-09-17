@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <title>Perfil Funcionário</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin&family=Raleway&family=Roboto+Mono:wght@400;600&display=swap");
+
+      body {
+        font-family: Libre Franklin, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .custom-navbar {
+        background-color: #bce1f9 !important;
+        color: #fff !important;
+      }
+      .container {
+        padding-right: 0;
+        padding-left: 0;
+      }
+
+      .navbar-brand {
+        padding-right: 0;
+        padding-left: 0;
+      }
+      .logo {
+        width: 30%;
+      }
+
+      .gap {
+        column-gap: 10px;
+      }
+      .img-profile {
+        width: 50%;
+      }
+      .btn-primary {
+        outline: none;
+        color: white !important;
+      }
+      @media (max-width: 800px) {
+        .nav-ajuste {
+          display: flex;
+          flex-direction: column;
+        }
+        .container a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .nav-a-ajuste {
+          width: 100%;
+        }
+        .logo {
+          width: 50%;
+        }
+        .img-profile {
+          width: 25%;
+        }
+        .ajuste-row {
+          padding: 5%;
+          align-content: center;
+          justify-content: center;
+        }
+
+        .btn-ajuste {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light custom-navbar">
+      <div class="container d-flex justify-content-between nav-ajuste">
+        <a class="navbar-brand col-sm-7" href="index.html"
+          ><img src="/img/LOGO-PROJETO.png" alt="" class="logo"
+        /></a>
+
+        <ul class="navbar-nav flex-row gap">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="perfilFuncionario.html">Funcionários</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="perfilAdm.html">Administrador</a>
+          </li>
+        </ul>
+
+        <button class="btn btn-outline-secondary col-sm-1 p-1">Sair</button>
+      </div>
+    </nav>
+    <div class="container mt-5 mb-5">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            id="funcionario"
+            data-toggle="tab"
+            href="#funcionario"
+            role="tab"
+            aria-controls="funcionario"
+            aria-selected="true"
+            >Funcionario</a
+          >
+        </li>
+      </ul>
+
+      <div class="container mt-5">
+        <div class="row d-flex ajuste-row">
+          <div class="col-md-3">
+            <img
+              src="/img/user-login.png"
+              alt="Foto de Perfil"
+              class="img-fluid img-profile"
+            />
+          </div>
+
+          <div class="tab-content" id="myTabContent">
+            <div
+              class="tab-pane fade show active"
+              id="admin"
+              role="tabpanel"
+              aria-labelledby="funcionario"
+            >
+              <div class="container mt-4">
+                <h1>Perfil de Funcionario</h1>
+                <form action="#" method="post">
+                  <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input
+                      placeholder="Nome do funcionario"
+                      type="text"
+                      class="form-control"
+                      id="nome"
+                      name="nome"
+                      disabled
+                      value="Admin Nome"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input
+                      placeholder="exemplo@dominio.com"
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                      disabled
+                      value="admin@example.com"
+                    />
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-md-2">
+                      <label for="ddd">DDD:</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="ddd"
+                        name="ddd"
+                        disabled
+                        value="12"
+                      />
+                    </div>
+                    <div class="form-group col-md-10">
+                      <label for="telefone">Telefone:</label>
+                      <input
+                        placeholder="Telefone"
+                        type="text"
+                        class="form-control"
+                        id="telefone"
+                        name="telefone"
+                        disabled
+                        value="123456789"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="data_nascimento">Data de Nascimento:</label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="data_nascimento"
+                      name="data_nascimento"
+                      disabled
+                      value="1990-01-01"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="cargo">Cargo:</label>
+                    <input
+                      placeholder="Cargo do funcionario"
+                      type="text"
+                      class="form-control"
+                      id="cargo"
+                      name="cargo"
+                      disabled
+                      value="funcionario"
+                    />
+                  </div>
+
+                  <div
+                    class="button-custom d-flex justify-content-between align-items-center"
+                  >
+                    <button type="submit" class="btn btn-primary">
+                      Salvar
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
