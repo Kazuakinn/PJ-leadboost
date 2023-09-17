@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Perfil administrador</title>
     <link
       rel="stylesheet"
       href="css/bootstrap.min.css"
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
-    <title>Perfil Funcionário</title>
+
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin&family=Raleway&family=Roboto+Mono:wght@400;600&display=swap");
 
@@ -70,7 +71,6 @@
           align-content: center;
           justify-content: center;
         }
-
         .btn-ajuste {
           display: flex;
           flex-direction: column;
@@ -90,7 +90,7 @@
 
         <ul class="navbar-nav flex-row gap">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html"
+            <a class="nav-link active" aria-current="page" href="gerenciamentoAdm.html"
               >Home</a
             >
           </li>
@@ -105,18 +105,19 @@
         <button class="btn btn-outline-secondary col-sm-1 p-1">Sair</button>
       </div>
     </nav>
+
     <div class="container mt-5 mb-5">
       <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
           <a
             class="nav-link active"
-            id="funcionario"
+            id="admin-tab"
             data-toggle="tab"
-            href="#funcionario"
+            href="#admin"
             role="tab"
-            aria-controls="funcionario"
+            aria-controls="admin"
             aria-selected="true"
-            >Funcionario</a
+            >Admin</a
           >
         </li>
       </ul>
@@ -130,21 +131,20 @@
               class="img-fluid img-profile"
             />
           </div>
-
           <div class="tab-content" id="myTabContent">
             <div
               class="tab-pane fade show active"
               id="admin"
               role="tabpanel"
-              aria-labelledby="funcionario"
+              aria-labelledby="admin-tab"
             >
               <div class="container mt-4">
-                <h1>Perfil de Funcionario</h1>
+                <h1>Perfil de Administrador</h1>
                 <form action="#" method="post">
                   <div class="form-group">
                     <label for="nome">Nome:</label>
                     <input
-                      placeholder="Nome do funcionario"
+                      placeholder="Nome do Administrador"
                       type="text"
                       class="form-control"
                       id="nome"
@@ -153,7 +153,6 @@
                       value="Admin Nome"
                     />
                   </div>
-
                   <div class="form-group">
                     <label for="email">Email:</label>
                     <input
@@ -166,7 +165,6 @@
                       value="admin@example.com"
                     />
                   </div>
-
                   <div class="form-row">
                     <div class="form-group col-md-2">
                       <label for="ddd">DDD:</label>
@@ -192,7 +190,6 @@
                       />
                     </div>
                   </div>
-
                   <div class="form-group">
                     <label for="data_nascimento">Data de Nascimento:</label>
                     <input
@@ -204,26 +201,34 @@
                       value="1990-01-01"
                     />
                   </div>
-
                   <div class="form-group">
                     <label for="cargo">Cargo:</label>
                     <input
-                      placeholder="Cargo do funcionario"
+                      placeholder="Cargo do Administrador"
                       type="text"
                       class="form-control"
                       id="cargo"
                       name="cargo"
                       disabled
-                      value="funcionario"
+                      value="Administrador"
                     />
                   </div>
-
                   <div
-                    class="button-custom d-flex justify-content-between align-items-center"
+                    class="button-custom d-flex justify-content-between align-items-center btn-ajuste"
                   >
                     <button type="submit" class="btn btn-primary">
                       Salvar
                     </button>
+                    <a href="gerenciamentoAdm.html">
+                      <button type="button" class="btn btn-primary">
+                        Lista Funcionários
+                      </button></a
+                    >
+                    <a href="cadastroFuncionario.html">
+                      <button type="button" class="btn btn-primary col-13">
+                        Cadastrar Funcionários
+                      </button></a
+                    >
                   </div>
                 </form>
               </div>
