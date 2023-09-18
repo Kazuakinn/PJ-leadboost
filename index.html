@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LeadBoost</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin&family=Raleway&family=Roboto+Mono:wght@400;600&display=swap");
+
+      body {
+        font-family: Libre Franklin, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .custom-navbar {
+        background-color: #bce1f9 !important;
+        color: #fff !important;
+      }
+      .container {
+        padding-right: 0;
+        padding-left: 0;
+      }
+
+      .navbar-brand {
+        padding-right: 0;
+        padding-left: 0;
+      }
+      .logo {
+        width: 30%;
+      }
+
+      .gap {
+        column-gap: 10px;
+      }
+      section {
+        padding: 20px;
+        background-color: #f9f9f9;
+        margin-top: 20px;
+        border-radius: 5px;
+      }
+      main {
+        padding: 20px;
+      }
+      .btn-primary svg {
+        width: 1em;
+        height: 1em;
+      }
+      .icon-filter {
+        margin-top: 8px;
+      }
+      .filter-button {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+      }
+
+      @media (max-width: 800px) {
+        .nav-ajuste {
+          display: flex;
+          flex-direction: column;
+        }
+        .container a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .nav-a-ajuste {
+          width: 100%;
+        }
+        .logo {
+          width: 50%;
+        }
+        .search-ajuste {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .btn-ajuste {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light custom-navbar">
+      <div class="container d-flex justify-content-between nav-ajuste">
+        <a class="navbar-brand col-sm-7" href="index.html"
+          ><img src="./img/LOGO-PROJETO.png" alt="" class="logo"
+        /></a>
+
+        <ul class="navbar-nav flex-row gap">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="https://lead-boost.vercel.app/index.html"
+              >Home</a
+>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://lead-boost.vercel.app/gerenciamentoAdm.html">Funcionários</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://lead-boost.vercel.app/perfilAdm.html">Administrador</a>
+          </li>
+        </ul>
+
+        <button class="btn btn-outline-secondary col-sm-1 p-1">Sair</button>
+      </div>
+    </nav>
+
+    <section
+      class="container mt-4 d-flex justify-content-between search-ajuste"
+    >
+      <div class="input-group col-md-7 p-2">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Pesquisar"
+          id="campo-pesquisa"
+          name="cps"
+        />
+
+        <button
+          class="btn btn-primary btn-md"
+          type="submit"
+          id="botao-pesquisar"
+        >
+          Pesquisar
+        </button>
+
+        <a href="https://lead-boost.vercel.app/#" class="filter-button ml-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-filter icon-filter"
+          >
+            <path
+              d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+            />
+          </svg>
+        </a>
+      </div>
+      <div class="container d-flex justify-content-end gap p-2 btn-ajuste">
+        <a class="btn btn-primary col-sm-4" href="https://lead-boost.vercel.app/form.html" target="_blank"
+          >Cadastrar Lead
+        </a>
+
+        <a class="btn btn-primary col-sm-2" href="https://lead-boost.vercel.app/TEM QUE INSERIR ALGO" download
+>Baixar
+        </a>
+      </div>
+    </section>
+
+    <main class="container mt-4">
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Email</th>
+              <th>CPF</th>
+              <th>Nome do Pai</th>
+              <th>Nome da Mãe</th>
+              <th>Curso Desejado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>João João</td>
+              <td>email1@example.com</td>
+              <td>123.456.789-00</td>
+              <td>Maria Edivaldo</td>
+              <td>Edvaldo</td>
+              <td>Sistema para internet</td>
+            </tr>
+            <tr>
+              <td>Maria Silva</td>
+              <td>email2@example.com</td>
+              <td>987.654.321-00</td>
+              <td>Carlos Oliveira</td>
+              <td>Oliveira</td>
+              <td>Desenvolvedor web</td>
+            </tr>
+            <tr>
+              <td>Ana Souza</td>
+              <td>email3@example.com</td>
+              <td>456.789.123-00</td>
+              <td>Ricardo Santos</td>
+              <td>Santos</td>
+              <td>Designer gráfico</td>
+            </tr>
+            <tr>
+              <td>Luisa Pereira</td>
+              <td>email4@example.com</td>
+              <td>789.123.456-00</td>
+              <td>Paulo Almeida</td>
+              <td>Almeida</td>
+              <td>Contador</td>
+            </tr>
+            <tr>
+              <td>Fernando Oliveira</td>
+              <td>email5@example.com</td>
+              <td>321.654.987-00</td>
+              <td>Silvia Silva</td>
+              <td>Silva</td>
+              <td>Engenheiro civil</td>
+            </tr>
+            <tr>
+              <td>Lucia Alves</td>
+              <td>email6@example.com</td>
+              <td>654.987.321-00</td>
+              <td>Roberto Costa</td>
+              <td>Costa</td>
+              <td>Advogado</td>
+            </tr>
+            <tr>
+              <td>Carlos Santos</td>
+              <td>email7@example.com</td>
+              <td>987.123.456-00</td>
+              <td>Laura Ferreira</td>
+              <td>Ferreira</td>
+              <td>Médico</td>
+            </tr>
+            <tr>
+              <td>Rita Lima</td>
+              <td>email8@example.com</td>
+              <td>456.321.789-00</td>
+              <td>Antonio Rodrigues</td>
+              <td>Rodrigues</td>
+              <td>Professor</td>
+            </tr>
+            <tr>
+              <td>Paulo Silva</td>
+              <td>email9@example.com</td>
+              <td>789.456.123-00</td>
+              <td>Isabel Sousa</td>
+              <td>Sousa</td>
+              <td>Enfermeira</td>
+            </tr>
+            <tr>
+              <td>Carlos Fernandes</td>
+              <td>email10@example.com</td>
+              <td>321.789.654-00</td>
+              <td>Patricia Nunes</td>
+              <td>Nunes</td>
+              <td>Arquiteto</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>
